@@ -1,2 +1,3 @@
 # ecg_cnn
-A 1D CNN for classifying individual heartbeats from ECG data.
+
+This is a project that builds a 1D convolutional neural network for classifying individual heartbeats from ECG data into five categories (Normal, Supraventricular, PVC, Fusion, Unknown), trained on the MIT-BIH Arrhythmia Database via the Kaggle ECG Heartbeat Categorization Dataset. The Python notebook details the full pipeline — stratified splits, class-imbalance handling via balanced class weights, a Conv1D architecture using GlobalAveragePooling to keep the parameter budget small, and evaluation using macro-F1 and a row-normalized confusion matrix. The final section discusses a specific failure mode — Supraventricular beats being confused with Normal — as a limitation of the single-beat input representation rather than that of the model itself.
